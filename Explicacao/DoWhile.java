@@ -16,7 +16,7 @@ import java.util.Scanner;
                 System.out.println("1. opcao 1");
                 System.out.println("2. opcao 2");
                 System.out.println("3. opcao 3");
-                System.out.println("4. opcao 4\n");
+                System.out.println("4. sair 4\n");
                 opcao = tec.nextInt();
 
                 qntdpessoas++;
