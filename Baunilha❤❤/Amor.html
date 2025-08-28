@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7d2d2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden; /* Evita barras de rolagem */
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .question-container {
+            position: relative;
+            padding: 20px;
+        }
+        .question-text {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+        .btn {
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #yesBtn {
+            background-color: #ff6b81;
+            color: white;
+        }
+        #yesBtn:hover {
+            background-color: #e55a73;
+        }
+        #noBtn {
+            background-color: #f0f0f0;
+            color: #333;
+            position: absolute; /* Para que o botão possa se mover */
+            transition: left 0.3s ease, top 0.3s ease;
+        }
+        img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        #resultContainer {
+            display: none; /* Inicia oculto */
+        }
+        #heartLoader {
+            display: inherit; /* Inicia visível */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="aniyuki-anime-gif-kiss-66.gif" alt="Do you love me?">
+    <div class="question-container">
+        <h1 class="question-text">Do you love me?</h1>
+        <div class="buttons">
+            <button class="btn" id="yesBtn">Yes</button>
+            <button class="btn" id="noBtn">No</button>
+        </div>
+    </div>
+    
+    <div id="resultContainer">
+        <h2>Eu te amo muito! 🥰</h2>
+    </div>
+
+</div>
+
+<script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const questionContainer = document.querySelector('.question-container');
+    const heartLoader = document.getElementById('heartLoader'); // Elemento 'loader' da imagem
+    const resultContainer = document.getElementById('resultContainer');
+
+    noBtn.addEventListener('mouseover', () => {
+        const newX = Math.floor(Math.random() * (questionContainer.offsetWidth - noBtn.offsetWidth));
+        const newY = Math.floor(Math.random() * (questionContainer.offsetHeight - noBtn.offsetHeight));
+
+        noBtn.style.position = 'absolute';
+        noBtn.style.left = `${newX}px`;
+        noBtn.style.top = `${newY}px`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+        // Ação para o clique no 'Sim'
+        // Na imagem, ele oculta um loader e exibe o resultado
+        // Adaptado aqui para o código HTML
+        
+        // Simula o tempo do gif/loader
+        setTimeout(() => {
+            if (heartLoader) heartLoader.style.display = 'none';
+            resultContainer.style.display = 'block'; // Muda para 'block' para exibir
+            
+            // Aqui você pode adicionar a lógica para a animação `gifResult.play()`
+            // O `gifResult.play()` da imagem sugere que havia um GIF.
+            // Eu adicionei um texto simples no lugar para demonstrar.
+        }, 500); // 500 milissegundos, como na imagem
+    });
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
