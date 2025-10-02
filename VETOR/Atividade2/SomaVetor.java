@@ -1,6 +1,6 @@
 public class SomaVetor {
     
-    int[] v = new int[5];
+    int v[] = new int[5];
 
     public void inicializa() {
 
