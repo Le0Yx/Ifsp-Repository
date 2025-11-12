@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estude Melhor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<div class="logo">Estude Melhor</div>
+<nav class="nav">
+<a href="#inicio">Início</a>
+<a href="#tecnicas">Técnicas</a>
+<a href="#espacos">Espaços</a>
+</nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+<div class="hero-content">
+<h1>Estudar com propósito, foco e leveza</h1>
+<p>Domine técnicas comprovadas e transforme seu estudo em progresso diário.</p>
+<div class="cta-area">
+<a class="btn primary" href="#tecnicas">Explorar técnicas</a>
+<a class="btn" href="#espacos">Entrar nos espaços</a>
+</div>
+</div>
+</section>
+
+<section id="tecnicas" class="section">
+<h2>Técnicas que funcionam</h2>
+<div class="grid">
+<div class="card">
+<h3>Flashcards + Repetição espaçada</h3>
+<p>Questione-se e revisite no ritmo certo para fixar o conhecimento.</p>
+</div>
+<div class="card">
+<h3>Active Recall</h3>
+<p>Recupere da memória sem olhar a resposta antes: força o cérebro a aprender.</p>
+</div>
+<div class="card">
+<h3>Pomodoro</h3>
+<p>Intervalos focados de 25 min com pausas curtas para manter energia.</p>
+</div>
+<div class="card">
+<h3>Anotações eficazes</h3>
+<p>Estruture ideias com títulos, listas e destaques. Revise com intenção.</p>
+</div>
+<div class="card">
+<h3>Resumos inteligentes</h3>
+<p>Capture o essencial e organize por tópicos para consolidar o entendimento.</p>
+</div>
+<div class="card">
+<h3>Técnica de Feynman</h3>
+<p>Explique com palavras simples. Se não consegue, aprofunde e tente de novo.</p>
+</div>
+</div>
+</section>
+
+<section id="espacos" class="section">
+<h2>Espaços de estudo</h2>
+<div class="flex">
+  <div class="panel">
+    <h4>Novo espaço</h4>
+    <div class="field">
+      <input id="space-name" type="text" placeholder="Nome do espaço">
+      <button id="create-space" class="btn small">Criar</button>
+    </div>
+    <h4>Seus espaços</h4>
+    <div id="space-list" class="list"></div>
+  </div>
+  <div class="panel">
+    <h4>Janelas</h4>
+    <div id="windows" class="windows"></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<p>Você é capaz. Um passo agora vale por muitos amanhã.</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
